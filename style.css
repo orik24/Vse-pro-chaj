@@ -192,7 +192,7 @@ text-align:center;
     border-bottom-style: solid;
     border-bottom-color: transparent;
     background-color: transparent;
-    background: url(/images/tea-before.png) no-repeat;
+    background: url(./images/tea-before.png) no-repeat;
     top: 1%;
     left: -60px;
 }
@@ -206,7 +206,7 @@ text-align:center;
     border-bottom-style: solid;
     border-bottom-color: transparent;
     background-color: transparent;
-    background: url(/images/tea-after.png) no-repeat;
+    background: url(./images/tea-after.png) no-repeat;
     top: 1%;
 	right: -60px;
 }
