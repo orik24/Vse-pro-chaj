@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Все про чай</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Place your description here" /> 
+<meta name="keywords" content="put, your, keyword, here" /> 
+<meta name="author" content="Templates.com - website templates provider" /> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+<script type="text/javascript">
+$(document).ready(function() {
+ $(".slider").each(function () { // обрабатываем каждый слайдер
+  var obj = $(this);
+  $(obj).append("<div class='nav'></div>");
+  $(obj).find("li").each(function () {
+   $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
+   $(this).addClass("slider"+$(this).index());
+  });
+  $(obj).find("span").first().addClass("on"); // делаем активным первый элемент меню
+ });
+});
+function sliderJS (obj, sl) { // slider function
+ var ul = $(sl).find("ul"); // находим блок
+ var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
+ var step = $(bl).width(); // ширина объекта
+ $(ul).animate({marginLeft: "-"+step*obj}, 500); // 500 это скорость перемотки
+}
+$(document).on("click", ".slider .nav span", function() { // slider click navigate
+ var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
+ $(sl).find("span").removeClass("on"); // убираем активный элемент
+ $(this).addClass("on"); // делаем активным текущий
+ var obj = $(this).attr("rel"); // узнаем его номер
+ sliderJS(obj, sl); // слайдим
+ return false;
+});
+</script>
+<!--[if lt IE 7]>
+   <script type="text/javascript" src="ie_png.js"></script>
+   <script type="text/javascript">
+       ie_png.fix('.png, .logo h1, .box .left-top-corner, .box .right-top-corner, .box .left-bot-corner, .box .right-bot-corner, .box .border-left, .box .border-right, .box .border-top, .box .border-bot, .box .inner, .special dd, #contacts-form input, #contacts-form textarea');
+   </script>
+<![endif]-->
+</head>
+
+<body id="page1">
+   <!-- header -->
+   <div id="header">
+      <div class="container">
+         <div class="wrapper">
+            <ul class="top-links">
+               <li><a href="index.html" class="first"><img alt="" src="images/icon-home.gif" /></a></li>
+               <li><a href="contact-us.html"><img alt="" src="images/icon-mail.gif" /></a></li>
+               <li><a href="sitemap.html"><img alt="" src="images/icon-map.gif" /></a></li>
+            </ul>
+            <div class="logo">
+               <h1><a href="index.html">Все про чай</a></h1>
+            </div>
+         </div>
+         <ul class="nav">
+            <li><a href="index.html" class="first current">Головна</a></li>
+            <li><a href="about-us.html">Про нас</a></li>
+            <li><a href="articles.html">Статті</a></li>
+			<li><a href="recepty.html">Рецепти</a></li>
+			<li><a href="podiji.html">Події</a></li>
+			<li><a href="forum.html">Форум</a></li>
+            <li><a href="contact-us.html">Контакти</a></li>
+            <li><a href="sitemap.html">Карта сайту</a></li>
+         </ul>
+      </div>
+   </div>
+   <!-- content -->
+   <div class="slider">
+	<ul>
+		<li><img src="images/slider/new/slide1.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide2.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide3.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide4.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide5.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide6.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide7.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide8.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide9.jpg" alt=""></li>
+		<li><img src="images/slider/new/slide10.jpg" alt=""></li>
+	</ul>
+</div>
+   <div id="content">
+      <div class="container">
+         <div class="inside">
+            <!-- box begin -->
+            <div class="box alt">
+            	<div class="left-top-corner">
+               	<div class="right-top-corner">
+                  	<div class="border-top"></div>
+                  </div>
+               </div>
+               <div class="border-left">
+               	<div class="border-right">
+                  	<div class="inner">
+                     	<div class="wrapper">
+                           <h3>ЩО ВАРТО ЗНАТИ ПРО ЧАЙ</h3>
+                           <p>Чай - один з найуживаніших напоїв на планеті. Він займає друге місце в рейтингу популярності після води! Це ми зараз такі розумні і знаємо, що чай - це напій. А ось коли чай вперше з'явився в Європі, ніхто не знав, що це за штука і з чим її їдять ... Ну і намагалися їсти - в буквальному сенсі. На одному з королівських прийомів з нього приготували салат і подали на стіл! :)</p> 
+						   <p>Більшість з нас додають в чай ​​цукор. А колись чай пили з сіллю. Уявляєте?</p>
+						   <p>А ось на Тибеті і зараз чай з сіллю і топленим маслом - національний напій. Він чудово втамовує спрагу і насичує. Хоча, звичайно, до його смаку потрібно звикнути.</p>
+						   <p>В Європі аж до 18 століття вважалося, що зелений і чорний чай - це листя з різних рослин. Втім, як виявилося, і в наші дні багато хто схильний до цієї омани.</p>
+						   <p>Насправді весь чай збирають з однієї рослини - Camellia sinensis. Різняться тільки способи обробки.</p>
+						   <p>В Англії чай дуже довго доставлявся тільки контрабандою. Подавали його в закритих закладах, куди допускали тільки чоловіків.</p>
+						   <p>Саме чаю ми повинні бути вдячні за виникнення швидкохідних морських транспортних судів. Взагалі торгівля чаєм дуже сприяла налагодженню контактів між Заходом і Сходом.</p>
+						   <p>В ході чайної церемонії в Китаї господарям дякують, делікатно постукуючи пальцями по столу. А в США гарячий чай п'ють максимум 15% населення. 85% полюбляють айс-ті - чай ​​з льодом.</p>
+						    <h3>ТОП-20 ЦІКАВИХ ФАКТІВ ПРО ЧАЙ</h3>
+						   <p>- Схід п'є чай більше 5 тисяч років. А Захід - всього лише трохи більше 400.</p>
+						   <p>- До 1800-х років кубики чаю використовувалися в Сибіру як гроші.</p>
+						   <p>- Чайні пакетики з'явилися в США в 1904 році. Деякі туристи вважають це найгіршим винаходом в світі!</p>
+						   <p>- Найбільше у світі чай п'є Ірландія, а Британія - тільки на другому місці.</p>
+						   <p>- Чай - національний напій Ірану і Афганістану.</p>
+						   <p>- Існує понад 1500 видів чаю.</p>
+						   <p>- Найбільше чаю виробляє Китай, від нього майже не відстає Індія.</p>
+						   <p>- Ще один винахід США - холодний чай, хоча є версія, що його придумав один британський продавець чаю на Всесвітній виставці в Сент-Луїсі в 1904 році.</p>
+						   <p>- Саме холодний чай вживається в США найбільш активно - 85% проти 15% у гарячого.</p>
+						   <p>- Після води, чай - найбільш споживаний напій на Землі. </p>
+						   <p>- Найбільшу кількість кави вживають мешканці Фінляндії – згідно статистики, вдень один громадянин може випити до 5 чашок.</p>
+						   <p>- У Китаї чорний чай називається червоним.</p>
+						   <p>- Найдорожче в світі чаювання пропонує готель «Рітц Карлтон» в Гонконзі. Чай на двох там коштує майже 9 тисяч доларів.</p>
+						   <p>- Чорний чай складає близько 75% всього споживаного в світі.</p>
+						   <p>- У Китаї під час чайної церемонії прийнято дякувати господарів за гостинність постукуванням пальцями по столу.</p>
+						   <p>- Після Бостонського чаювання чай втратив свою популярність в Америці, де і понині більшість населення віддає перевагу каві.</p>
+						   <p>- Чай не завжди був популярний у Великобританії. Хоча вперше напій завезли до країни в 1657 році, його стали вживати тільки у другій половині XVIII століття.</p>
+						   <p>- Довгий час в Англію чай доставлявся контрабандою і продавався в закритих кав'ярнях, куди допускалися лише чоловіки.</p>
+						   <p>- «Lipton» - найпопулярніша в світі марка чаю.</p>
+						   <p>- В США виробником чаю є Південна Кароліна - єдиний штат з чайною плантацією.</p>
+						   <p>- Вважається, що дубильна кислота в чорному чаї може допомогти видалити бородавки.</p>
+						   <p>- Чайні таніни сприяють зупинці кровотечі і перешкоджають розвитку запалення.</p>
+						   <p>- Торгівля чаєм прискорила розвиток взаємодії Сходу і Заходу.</p>
+						   <p>- Ми можемо бути вдячні чаю за створення швидкохідних транспортних суден.</p>
+						   <p>- Легенда свідчить, що чай був винайдений в 2737 році до нашої ери, коли другий імператор Китаю Шень Нинг випадково впустив чайне листя в окріп.</p>
+						   <p>- Більшу частину чаю у світі вирощують в гірських тропічних регіонах.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="left-bot-corner">
+               	<div class="right-bot-corner">
+                  	<div class="border-bot"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- box end -->
+            <!-- box begin -->
+            <div class="box">
+            	<div class="left-top-corner">
+               	<div class="right-top-corner">
+                  	<div class="border-top"></div>
+                  </div>
+               </div>
+               <div class="border-left">
+               	<div class="border-right">
+                  	<div class="inner">
+                     	<h3>Останні статті</h3>
+                        <div class="blok-last">
+							<img src="images/picie-kawy-700x394.jpg" width="150" alt="Чай: користь і шкода" title="" class="mal-golovna" loading="lazy">
+							<p class="desc-title"><a href="article1.html" class="desc-title">Чай: користь і шкода</a></p>
+							<p class="desc-text">Чай є одним із самих популярних напоїв на землі, бо його споживають у тому чи іншому вигляді на всіх континентах. Попри корисність чаю існують різні елементи шкідливості цього напою.</p>
+						   <p class="clear"></p>
+						   <img src="images/statti/rytual-1.png" width="150" alt="Як п'ють чай в усьому світі" title="" class="mal-golovna" loading="lazy">
+                           <p class="desc-title"><a href="article2.html" class="desc-title">Як п'ють чай в усьому світі</a></p>
+                           <p class="desc-text">Є спільні риси, а є і відмінності у способах приготування і ритуалах споживання чаю у народів світу. Продедура чаювання в різних народів - традиції, рецептури, ритуали.</p>
+						   <p class="clear"></p>
+						   <img src="images/statti/tea-child.jpg" width="150" alt="Дитячі трав'яні чаї" title="" class="mal-golovna" loading="lazy">
+                           <p class="desc-title"><a href="article3.html" class="desc-title">Дитячі трав'яні чаї</a></p>
+                           <p class="desc-text">Захотівши побалувати дитину корисним та смачним напоєм або почавши привчати малюка до теплих сімейних чаювань, у батьків часто виникає питання, а яким же чаєм його напоїти? </p>
+                        </div>
+                     </div>	
+                  </div>
+               </div>
+			   <div class="left-bot-corner">
+               	<div class="right-bot-corner">
+                  	<div class="border-bot"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- box end -->
+			<p></p>
+			 <!-- box begin -->
+            <div class="box">
+            	<div class="left-top-corner">
+               	<div class="right-top-corner">
+                  	<div class="border-top"></div>
+                  </div>
+               </div>
+               <div class="border-left">
+               	<div class="border-right">
+                  	<div class="inner">
+                     	<h3>Останні рецепти</h3>
+                        <div class="blok-last">
+							<img src="images/recepty/чай-кориця-700.jpg" width="150" alt="Чай з корицею" title="" class="mal-golovna" loading="lazy">
+							<p class="desc-title"><a href="recept1.html" class="desc-title">Чай з корицею</a></p>
+							<p class="desc-text">Ароматно, насичено, швидко, для вечірніх посиденьок! Чай з корицею виходить дуже пряний. Спеція надає йому дивовижний, теплий, затишний і привабливий запах.</p>
+						   <p class="clear"></p>
+						   <img src="images/recepty/imbyr-lemon-tea-800.jpg" width="150" alt="Імбирний чай з лимоном" title="" class="mal-golovna" loading="lazy">
+                           <p class="desc-title"><a href="recept2.html" class="desc-title">Імбирний чай з лимоном</a></p>
+                           <p class="desc-text">Ідеальний напій для холодної пори року! Цей чай з лимоном виходить з імбирним смаком та виразною кислинкою. Хороший він і для дружніх посиденьок, і для медитативної самотності.</p>
+						   <p class="clear"></p>
+						   <img src="images/recepty/tea-oblipiha-800.jpg" width="150"  alt="Чай з обліпихи" title="" class="mal-golovna" loading="lazy">
+                           <p class="desc-title"><a href="recept3.html" class="desc-title">Чай з обліпихи</a></p>
+                           <p class="desc-text">Ароматний, смачний та дуже корисний напій! Чудовий смак і яскравий колір піднімають настрій і покращують апетит. Користь такого чаю неоціненна в сезон респіраторних захворювань.</p>
+                        </div>
+                     </div>	
+                  </div>
+               </div>
+			   <div class="left-bot-corner">
+               	<div class="right-bot-corner">
+                  	<div class="border-bot"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- box end -->
+			<p></p>
+			 <!-- box begin -->
+            <div class="box">
+            	<div class="left-top-corner">
+               	<div class="right-top-corner">
+                  	<div class="border-top"></div>
+                  </div>
+               </div>
+               <div class="border-left">
+               	<div class="border-right">
+                  	<div class="inner">
+                     	<h3>Останні події</h3>
+                        <div class="blok-last">
+							<img src="images/podiji/tea-festival/tea-pod01.jpg" width="150"  alt="Фестиваль чаю «Kyiv Tea Festival - 2023" title="" class="mal-golovna" loading="lazy">
+							<p class="desc-title"><a href="podiya1.html" class="desc-title">Фестиваль чаю «Kyiv Tea Festival - 2023</a></p>
+							<p class="desc-text">1500 літрів чаю, 18 годин церемоній та неймовірна атмосфера, сотні відгуків та нові знайомства: як пройшов чайний фестиваль Kyiv Tea Festival</p>
+						   <p class="clear"></p>
+						  <img src="images/podiji/tea-festival/tea-pod02.jpg" width="150"  alt="Екскурсія найкращими чайними Львова - повний і детальний гід" title="" class="mal-golovna" loading="lazy">
+                           <p class="desc-title"><a href="podiya2.html" class="desc-title">Екскурсія найкращими чайними Львова - детальний гід</a></p>
+                           <p class="desc-text">Історично Львів вважається містом кави. Але часи змінюються і чайна культура потрошку починає відвойовувати своє.</p>
+						   <!---<p class="clear"></p>
+						   <img src="images/recepty/kofe-shokolad150.jpg" alt="Кава з шоколадом" title="" class="mal-golovna" loading="lazy">
+                           <p class="desc-title"><a href="recept3.html" class="desc-title">Кава з шоколадом</a></p>
+                           <p class="desc-text">Оскільки якісний шоколад, так само як і ароматна кава, користується величезною популярністю у жителів земної кулі, не дивно, що з'явилися різноманітні варіації поєднання двох ласощів.</p>-->
+                        </div>
+                     </div>	
+                  </div>
+               </div>
+			   <div class="left-bot-corner">
+               	<div class="right-bot-corner">
+                  	<div class="border-bot"></div>
+                  </div>
+               </div>
+            </div>
+            <!-- box end -->
+         </div>
+      </div>
+   </div>
+   <!-- footer -->
+   <div id="footer">
+      <div class="container">
+         <div class="indent">
+            <div class="fleft"></div>
+            <div class="fright"></div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
